@@ -23,17 +23,16 @@ boolean
 char
 
 ### Peculiaridades dos Tipos Primitivos
+byte idade = 123;
+short anoa = 2021;
+int cep = 21070333; // Se começar com zero, talvez ser do tipo seja String
+long cpf = 98765432109L; // Se começão com zero, talvez ser do tipo String. Necessário terminar com L para entender do tipo long.
+float pi = 3.14f; // Quando do tipo float, inserir um F ou f no final do valor.
+double salario = 1275.33;
 
-    byte idade = 123;
-    short anoa = 2021;
-    int cep = 21070333; // Se começar com zero, talvez ser do tipo seja String
-    long cpf = 98765432109L; // Se começão com zero, talvez ser do tipo String. Necessário terminar com L para entender do tipo long.
-    float pi = 3.14f; // Quando do tipo float, inserir um F ou f no final do valor.
-    double salario = 1275.33;
-
-## Variávei Constantes
-    São valores armazenados em memória que não podem ser modificados depois de declarados. Essas variáveis são representandos pelas palavras reservadas *final*.
-    Por convenção, as Constantes são sempre escritas em caixa alta.
+## Variáveis Constantes
+São valores armazenados em memória que não podem ser modificados depois de declarados. Essas variáveis são representandos pelas palavras reservadas *final*.
+Por convenção, as Constantes são sempre escritas em caixa alta.
 
 
 # -----------------------------------------------------------------
