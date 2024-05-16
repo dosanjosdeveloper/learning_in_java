@@ -38,3 +38,54 @@ Por convenção, as Constantes são sempre escritas em caixa alta.
 # -----------------------------------------------------------------
 # Operadores
 
+=   | Atribuição, define ou altera o valor de uma váriável
+==  | Comparação Igualdade, compara se valor é igual a outro
+>   | Comparação de Maior, se valor do lado esquerdo é maior
+<   | Comparação de Menor, se valor do lado direito é menor.
++   | Operador de Adição ou Soma
+*   | Operador de Multiplicação
+/   | Operador de Divisão
+-   | Operador de Subtração
+%   | Operador Mode de Resto da Divisão
+!=  | Operador da Diferença
+>=  | Operador de Maior ou Igual
+<=  | Operador de Menor ou Igual
+
+## Operadores Unários
+Esses operadores são aplciados juntamento com outro operador aritimetico. Realizam alguns trabalhos básicos como incrementar, decrementar, inverter valores numéricos e booleanos.
+São eles:
+(+) - Operador unário de valor positivo
+(-) - Operador unário de valor negativo
+(++) Operador unário de incremento de valor
+(--) Operador unário de decremento de valor
+(!) Operador lógico de negação
+
+## Operador Ternário
+É uma condição IF normal, porém com uma escrita reduzida somente em uma linha.
+Exemplo: <Exepressão Condicional> ? <Caso condiçaõ seja true> : <Caso condição seja false>
+
+    int a, b;
+    a=5;
+    b=6;
+    resultado = a==b ? "Verdade":"Falso";
+
+## Operadores Lógicos
+&&  | Operador Lógico "E"
+||  | Operador Lógico "OU"
+
+# Métodos
+Correspondem a funções ou cub-rotinas disponiveis dentro das classes.
+
+### Critério de nomeação de métodos
+* Seguir padrão camelCase
+* Deve ser nomeado como verbo
+
+# EXERCICIO
+## Nome do Programa : SmartTV
+Criar uma aplicação SmartTV, onde;
+* Verifica o estado se a mesma está ligada
+* Verifica o numero canal, seja incrementeal ou decremental de 1 em 1 ou digitando o número do canal desejado.
+* Verificar o numero do volume,  seja incrementeal ou decremental de 1 em 1
+
+# Escopo
+O Escopo pode ser entendido como o ambiente onde uma variável pode sr acessada. Em java, o escopo de váriáveis vai de acordo com o blcoco onde ela foi declarada.
