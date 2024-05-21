@@ -89,3 +89,47 @@ Criar uma aplicação SmartTV, onde;
 
 # Escopo
 O Escopo pode ser entendido como o ambiente onde uma variável pode sr acessada. Em java, o escopo de váriáveis vai de acordo com o blcoco onde ela foi declarada.
+
+# Read the Documentation
+
+@autor
+@version
+@since
+
+# Terminal e Argumentos
+### Explorar opções de entrada e saída de dados em uma aplicação Java.
+## Como executar uma aplicação Java?
+### Executar um arquivo bytecode .class
+java minhaaplicacao.class
+
+### Executar um arquivo com parâmetros
+java minhaaplicacao JOSE RAFAEL 38 1.84
+
+## Receber Argumentos na Inicialização da Aplicação
+
+  String nome = args[0];
+  String sobrenome = args[1];
+  int idade = Integer.valueOf(args[2]);
+  double altura = Double.valueOf(args[3])
+
+  sout("Imprime os argumentos")
+
+No arquivo launch.json add
+{
+    "type":"java",
+    "request":"launch",
+    "mainClass":"AboutMe",
+    "args":[
+        "RAFAEL",
+        "DOS ANJOS",
+        "38",
+        "1.82"
+    ]
+
+}
+
+## Entrada de Dados com Scanner
+A classe Scanner permite a interação do usuário com a entrada de dado ao sistema.
+ Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+ String dado = scanner.nextInt();
+
