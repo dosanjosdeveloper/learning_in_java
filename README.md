@@ -133,3 +133,104 @@ A classe Scanner permite a interação do usuário com a entrada de dado ao sist
  Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
  String dado = scanner.nextInt();
 
+# Agora Valendo
+# Estruturas Condicionais com Java (Projeto - EstruturaCondicionais_Java) 
+## Estrutura de Repetição.
+* for
+* while
+* do-while
+## Estrutura de Condição.
+* if-else
+* switch-case
+## Estrutura de Exceções.
+* try-catch-finally
+* throw
+
+## Condicional Simples - Exemplo: Caixa Eletrônico
+    public class CaixaEletronico {
+        public static void main(String[] args) {
+            double saldo = 25.0;
+            double valorSolcitado = 17.0;
+            if (valorSolcitado < saldo){
+                saldo=saldo - valorSolcitado;
+            }else {
+                System.out.println("Saldo Insuficiente");
+            }
+            System.out.println("Saldo Atual "+saldo);
+        }
+    }
+
+## Condicionais Composta - Exemplo: ResultadoEscolar
+Quando existe mais de fluxo amarrado a uma condição. Obsernando que acima se não existisse o else, a mesma seguiria Condicional Simples. Porém acabou sendo Condicional Composta.
+    public class ResultadoEscolar {
+        public static void main(String[] args) {
+            int nota = 6;
+        /**
+         * Verificando se Nota é maior o igual a 7. Caso Verdadeiro imprime Aprovado caso Falso imprime Reprovado.
+         * */
+            if (nota >= 7 ){
+                System.out.println("Aprovado!");
+            }else {
+                System.out.println("Reprovado!");
+            }
+        }
+    }
+
+## Condicionais Encadeadas - Exemplo: ResultadoEscolarRecuperar
+Está associado ao controle de fluxo condicional, não se limitando ao IF ou ELSE. Podendp ter mais outras condições.
+    public class ResultadoEscolarRecuperar {
+        public static void main(String[] args) {
+            int nota = 6;
+            /**
+            * Verificando se Nota é maior o igual a 7. Caso Verdadeiro imprime Aprovado caso Falso imprime Reprovado.
+            * Demostrando que pode haver mais de duas condições
+            * */
+            if (nota >= 7 ){
+                System.out.println("Aprovado!");
+            } else if (nota >= 5 && nota > 7) {
+                System.out.println("Em Recuperação!");
+            } else {
+                System.out.println("Reprovado!");
+            }
+        }
+    }
+
+## Condição Ternária - Exemplo: ResultadoEscolarTernario
+Onde podemos aberviar o algoritimo condicional refatorando/simplicando em ima linha a condição IF seguindo exemplo da Condicional Simples.
+    public class ResultadoEscolarTernario {
+        public static void main(String[] args) {
+            int nota = 6;
+            /**
+            * Verificando se Nota é maior o igual a 7. Caso Verdadeiro imprime Aprovado caso Falso imprime Reprovado.
+            * Em um acondição Ternária. Simpels
+            * */
+            String resultado = nota >= 7 ? "Aprovado" : "Reprovado";
+
+            System.out.println(resultado);
+        }
+    }
+
+## Condição Switch Case - Exemplo: SistemaDeMedida
+A estrutura Switch verifica cada caso se verdadeiro. Quando encontrado executação a instrução e utiliza o Break para sair da execução.
+Exemplo abaixo de uma condição usando o Switch Case.
+    public class SistemaDeMedida {
+        public static void main(String[] args) {
+            String sigla = "A";
+
+            switch (sigla){
+                case "P":
+                    System.out.println("PEQUENO");
+                    break;
+                case "M":
+                    System.out.println("MEDIO");
+                    break;
+                case "G":
+                    System.out.println("GRANDE");
+                    break;
+                default:
+                    System.out.println("Indefinido");
+                    break;
+            }
+        }
+    }
+
