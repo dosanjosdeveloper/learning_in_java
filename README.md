@@ -133,7 +133,7 @@ A classe Scanner permite a interação do usuário com a entrada de dado ao sist
  Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
  String dado = scanner.nextInt();
 
-# Agora Valendo
+# -------------------- AGORA VALENDO ----------------
 # Estruturas Condicionais com Java (Projeto - EstruturaCondicionais_Java) 
 ## Estrutura de Repetição.
 * for
@@ -234,3 +234,107 @@ Exemplo abaixo de uma condição usando o Switch Case.
         }
     }
 
+# Estrutura De Repeticao com Java (Projeto - EstruturaDeRepeticao_Java)
+Laços de repetição ou laços de interação ou simplesmente loop, são comandos que permitem interação em um bloco diversas vezes até atingir a condição verdadeira.
+* For (Para)
+* While (Enquanto)
+* Do While (Faça Enquanto)
+
+## FOR - Exemplo: AboutFor 
+Permite que uma variavel contadora seja testada a cada interação, sendo verdadeira incrementada ou decrementada a cada interação.
+    public class AboutFor {
+        public static void main(String[] args) throws InterruptedException {
+            /**
+            * Exemplo de interação do for, onde o valor de i=0, enquanto i for menor ou igual a 10, executa o loop de incremento i++.
+            * */
+            for (int i = 0; i <= 10; i++){
+                Thread.sleep(700);
+                System.out.println("Contando "+i);
+            }
+
+        }
+    }
+
+## FOR em ARRAY - Exemplo: AboutForInArray
+Exemplo código abaixo autoexplicativo.
+
+    public class AboutForInArray {
+        public static void main(String[] args) {
+            String alunos[] = {"FELIPE","JONAS","JULIA","MARCOS"};
+
+            for (int x=0; x < alunos.length; x++){
+                System.out.println("Aluno no indice x="+x+" é "+alunos[x]);
+            }
+
+            /**
+            * Temos também o foreach
+            * */
+
+            for(String aluno:alunos){
+                System.out.println("Nome do Aluno é: "+aluno);
+            }
+        }
+    }
+
+## BREAK e CONTINUE - Exemplo: BreakContinue
+Breake significa quebrar, parar, frear. Continue continua o laço.
+
+    public class BreakContinue {
+        public static void main(String[] args) {
+            for (int numero = 1; numero <= 5;numero++){
+                if (numero == 3) {
+                    System.out.println("Vou parar!");
+                //                break;
+                    continue;
+                }
+                System.out.println("Numero: "+numero);
+            }
+        }
+    }
+
+
+## WHILE - Exemplo: AboutWhile
+Determina que enquanto uma conição for válida, o bloco de código será executado. Sempre executando a verificação da condição, caso seja falsa a mesma não prosseguirá.
+
+    public class AboutWhile {
+        public static void main(String[] args) {
+            double mesada = 50.0;
+
+            while (mesada > 0){
+                Double valorDoce = valorAleatorio();
+                if (valorDoce > mesada){
+                    valorDoce = mesada;
+                }
+                System.out.println("Doce do valor: "+valorDoce+" Adicionado ao carrinho.");
+                mesada = mesada - valorDoce;
+            }
+            System.out.println("Mesada: "+mesada);
+            System.out.println("Joãozinho gastou toda a sua mesada em doces.");
+        }
+
+        public static double valorAleatorio(){
+        return ThreadLocalRandom.current().nextDouble();
+        }
+    }
+
+## DO WHILE - Exemplo: AboutDoWhile
+Considera que enquanto uma codição for válida, executa o código. Entretanto a condição somente é testada após executar o código.
+
+    public class AboutDoWhile {
+        public static void main(String[] args) {
+            System.out.println("Discando. . . ");
+
+            do {
+                System.out.println("Telefone tocando.");
+            }while (tocando());
+
+            System.out.println("Alô!");
+        
+        }
+
+        private static boolean tocando(){
+            boolean atendeu = new Random().nextInt(3)==1;
+            System.out.println("Atendeu? "+atendeu);
+            return !atendeu;
+        }
+    }
