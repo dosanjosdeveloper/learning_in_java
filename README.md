@@ -338,3 +338,125 @@ Considera que enquanto uma codição for válida, executa o código. Entretanto 
             return !atendeu;
         }
     }
+
+
+# Tratamento de Exceções com Java (Exceções)
+Ao executar o código Java, diferentes erro podem acontecer: erros de codificação feito pelo programador, errodevido a entrada ou imprevistos.
+
+## Try Catch - Exemplo: AboutMe
+Apresentação de um tratamento de exceções abaixo.
+
+    public class AboutMe {
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+            try {
+
+                System.out.println("Digite seu Nome: ");
+                String nome = scanner.nextLine();
+
+                System.out.println("Digite seu Sobrenome:");
+                String sobrenome = scanner.nextLine();
+
+                System.out.println("Digite sua Idade: ");
+                int idade = scanner.nextInt();
+
+                System.out.println("Digite sua altura");
+                double altura = scanner.nextDouble();
+
+            // Imprimindo os dados obtidos pelo ususário
+            System.out.println("Olá, me chamo "+nome.toUpperCase()+" "+sobrenome.toUpperCase());
+            System.out.println("Tenho "+idade+" anos.");
+            System.out.println("Minha altura é "+altura+" metros");
+            scanner.close();
+            }catch (Exception e){
+                System.out.println("Message "+e.getMessage()+"\n" +
+                        "Causa "+e.getCause()+"\n"+
+                        "Rastreio "+e.getStackTrace());
+            }
+        }
+    }
+
+
+## jHierarquia das Exceções e excções customizadas - Exemplo: FormatadorCepExemplo
+
+    public class FormatadorCepExemplo {
+        public static void main(String[] args) {
+            try {
+                String cepFormatado = formatarCep("237650");
+                System.out.println(cepFormatado);
+            } catch (CepInvalidoException e) {
+                //throw new RuntimeException(e);
+                System.out.println("Cep não corresponde ao válido!");
+            }
+        }
+
+        static String formatarCep(String cep) throws CepInvalidoException{
+            if(cep.length() != 8)
+                throw  new CepInvalidoException();
+
+            //Simulando um cep formatado
+            return "23.765-064";
+        }
+    }
+
+# Desafio de Projeto - DesafioControleDeFluxo
+Ver no GitHub
+
+# Fundamentos da Programação Orientada a Objetos com Java
+
+## Calsses
+São contidas pelo Identificador, Caracteristicas e Comportamentos
+* model: Classes que represetam a camada e modelo da aplicação: Cliente, Pedido, NotaFiscal, Usuário.
+* repository: Classes ou interfaces que possuem a finalizadade de interagir com tabelas no bando de dados: ClienteRepository
+* service: Classes que contém regras de negócio do sistema: ClienteService possui o método validar o CPF do cliente cadastrado.
+* controller: Callses que possuem a finalidade de disponibilizar os nosso recurso da aplicação para outras aplicações via padrão http
+* view: Classes que possuem alguma interação com a interface gráfica acessada pelo ususário.
+* util: Pacote que contém classes utilitárias do sistema: FormatadorNumeroUtil, ValidadorUtil
+
+## Pacotes
+
+## Visibilidade dos Recursos
+
+## Modificadores de Acesso
+
+1. Modificador "public": Método e atributo é definido como public, qualquer outra classe em qualquer outro pacote pode visualizar tais recursos.
+2. 
+
+## Getter e Setters
+
+## Construtores
+
+## Enums
+Trata eventos que raramente sofrerá alteração em sua lista. Como por exemplo estados Brasileiro, Estado Civil, etc
+Não confundir contantes com enum. Um enum é um conjunto de objetos pré-definidos na aplicação.
+Os diagramas tem dois comportamentos, os Estruturais e os Comportamental
+
+* Diagrama Estrutural - Diagrama De Classe: 
+* Diagrama Estrutural - Diagrama De Objetos: 
+
+## UML - Linguagem de Modelagem Unificada
+Linguagem de Modelagem Unificada ou UML é uma notação que possibilita a representação gráfica de um projeto.
+
+### Diagramas, Elementos e Relacionamentos.
+
+# Pilares da Programação Orientada a Objetos Java
+
+## Pilares da POO (Programação Oerientada a Objetos)
+Baseado no conceito de objetos que podem conter dados na forma de campo, também conhecidos como atributos, e códigos, na forma de procedimento, tamb´me conhecidos como métodos.
+Se trata de um contexto análogo ao mundo real , tudo no qual nos referimos são objetos.
+
+# Encapsulamento: 
+Nem tudo precisa estar visível, grande parte do nosso algoritimo pode ser distribuido em métodos com finalidades específicas que complementa uma ação em nossa aplicação.
+# Herança:
+Carateristicas e comportamentos comuns podem ser elevados e compartilhados através de uma hoerarquia de objetos.
+# Abstração:
+É a indisponibilidade para determinar a lógica de um ou vários comportamentos em um objeto.
+# Polimorfismo:
+São inúmeras as maneiras de se realizar uma mesma ação 
+# Interface
+
+
+
+# Conhecendo Collections Java - Collection Framework API
+
