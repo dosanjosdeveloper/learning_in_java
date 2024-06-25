@@ -460,3 +460,4 @@ São inúmeras as maneiras de se realizar uma mesma ação
 
 # Conhecendo Collections Java - Collection Framework API
 
+## Entendendo o Generics Type
